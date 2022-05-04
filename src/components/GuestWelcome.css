@@ -1,0 +1,16 @@
+.gcontainer {
+    top: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.img-with-text {
+    text-align: justify;
+    color :rgba(255, 255, 255, 0.8);
+}
+
+.img-with-text img {
+    display: block;
+    margin: 0 auto;
+}

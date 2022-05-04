@@ -1,0 +1,12 @@
+.bar{
+    height: 50px;
+    transition: transform 0.2s ease;
+    box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+    border-radius: 1rem;
+    border: 0;
+    margin-bottom: 1.5em;
+    backdrop-filter: blur(10px);
+    background: inherit;
+    background-color: rgba(225, 225, 225, 0.4);
+    line-height: normal;
+}
