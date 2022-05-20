@@ -147,3 +147,16 @@ img {
   margin-right: 1.5rem;
   margin-left: 1.5rem;
 }
+
+.textAreaContainer{
+  width: 91.9%;
+  height: 250px;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  border-radius: 4px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out;
+  border: 0px;
+  font-family: 'Courier New', monospace;
+}

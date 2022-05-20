@@ -1,3 +1,5 @@
 {
-    "SERVER_URL":"https://httpbin.org/post"
+    "STORE_DECK_URL":"http://54.165.242.195:5000/store",
+    "GET_DECK_URL":"http://54.165.242.195:5000/deck",
+    "BATTLE_URL":"http://54.165.242.195:5000/battle"
 }

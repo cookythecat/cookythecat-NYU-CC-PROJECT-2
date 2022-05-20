@@ -4,7 +4,7 @@ import Select from 'react-select';
 import "./CardDetail.css";
 import characters from "../characters.json";
 import {sliceBNIntoArr} from "./Utils"
-import { cardClass,} from "./Utils";
+import { cardClass} from "./Utils";
 import settings from '../settings.json'
 const Web3Utils = require('web3-utils');
 var BN = Web3Utils.BN;
@@ -46,11 +46,14 @@ function CardDeckRegister({open, onClose, parentCardContract, parentAcc}) {
     }
     
     async function builDeck(){
-      const jsonData = JSON.stringify(selectedOption);
+      const rawJson = {
+        "uid" : parentAcc,
+        "deck" : selectedOption
+      }
+      const jsonData = JSON.stringify(rawJson);
       console.log(jsonData);
 
-      console.log('env: ' + settings['SERVER_URL'])
-      await fetch(settings['SERVER_URL'], 
+      await fetch(settings['STORE_DECK_URL'], 
         {
           method: 'POST',
           headers: {
