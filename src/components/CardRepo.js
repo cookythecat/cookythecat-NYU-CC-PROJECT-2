@@ -15,7 +15,18 @@ import CardDetail from './CardDetail';
 
 const Web3Utils = require("web3-utils");
 var BN = Web3Utils.BN;
-
+let typeDic = {
+  0 : 'fire',
+  1 : 'water',
+  2 : 'grass',
+  3 : 'normal',
+  4 : 'electric',
+  5 : 'ice',
+  6 : 'fly',
+  7 : 'fight',
+  8 : 'rock',
+  9 : 'bug'
+}
 
 export default class CardRepo extends Component {
     async componentDidMount() {
@@ -122,13 +133,11 @@ export default class CardRepo extends Component {
                                             <div class="text-center">
                                             <MDBCardTitle> {characters[(card.subAttributes[0] % this.state.total_chars)]['name']} </MDBCardTitle> 
                                                 <MDBCardText> Token Id:{card.tokenId.toString()}
-                                                <br/> Skill 1:{card.subAttributes[1]}
-                                                <br/> Skill 2:{card.subAttributes[2]}
-                                                <br/> Skill 3:{card.subAttributes[3]}
-                                                <br/> Skill 4:{card.subAttributes[4]}
-                                                <br/> Skill 5:{card.subAttributes[5]}
-                                                <br/> Skill 5:{card.subAttributes[6]}
-                                                <br/> Skill 5:{card.subAttributes[7]}
+                                                <br/> ATK:{card.subAttributes[1] % 10}
+                                                <br/> DEF:{card.subAttributes[2] % 10}
+                                                <br/> HP:{card.subAttributes[3] % 10}
+                                                <br/> SPD:{card.subAttributes[4] % 10}
+                                                <br/> TYEP:{typeDic[card.subAttributes[5] % 10]}
                                                 </MDBCardText>
                                             </div>
 
