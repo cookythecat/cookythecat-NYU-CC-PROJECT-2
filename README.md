@@ -3,13 +3,17 @@
 
 ## prerequisite
 
- - Truffle
- - npm
+ - Node.js
+
+
 ## Installation & Environment Setup
  - Run `git clone https://github.com/cookythecat/cookythecat-NYU-CC-PROJECT-2.git`
  - Run `cd <path to the project>\cookythecat-NYU-CC-PROJECT-2`
  - Run `npm config set legacy-peer-deps true`
  - Run 	`npm install`
+ - Run `npm install --g --production windows-build-tools`
+ - Run `npm install -g truffle`
+ - If there is still Visual Studio Dependency problem, go to check `https://stackoverflow.com/questions/57879150/how-can-i-solve-error-gypgyp-errerr-find-vsfind-vs-msvs-version-not-set-from-c`
  - Put the private key that you want to `.env`
  - Run `truffle compile` to compile the NFT Card contract and market contract.
  - Go to to get some `Kovan ether`, you can go `https://faucets.chain.link/` to get some
